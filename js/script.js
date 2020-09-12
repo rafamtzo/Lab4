@@ -23,13 +23,17 @@ list.innerHTML = currentList + `<input type = "checkbox" name="todo" />  ${todo}
  
 function TodoClear(e) {
 e.preventDefault();
-   
+var todos = document.getElementsByName("todo");
+
+for(var i = 0; i < todos.length; i++){
+    todos[i].checked = false;
+}
 }
  
 function TodoMark(e) {
 e.preventDefault();
    
-var todos = document.getElementsbyTagName("listOfTodos");
+var todos = document.getElementsByName("todo");
 
 for(var i = 0; i < todos.length; i++){
     todos[i].checked = true;
@@ -39,5 +43,9 @@ for(var i = 0; i < todos.length; i++){
  
 function TodoDel(e) {
 e.preventDefault();
+
+var list = document.getElementById("todoList");
+
+list.innerHTML = " "
    
 }
