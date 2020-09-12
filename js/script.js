@@ -29,7 +29,7 @@ e.preventDefault();
 function TodoMark(e) {
 e.preventDefault();
    
-var todos = document.getElementsbyTagName("todo");
+var todos = document.getElementsbyTagName("listOfTodos");
 
 for(var i = 0; i < todos.length; i++){
     todos[i].checked = true;
